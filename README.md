@@ -1,4 +1,4 @@
-# jenkinz
+# Jenkinz
 
 Docker image with custom Jenkins with plugins
 
@@ -22,14 +22,14 @@ docker build --no-cache --pull --force-rm --rm -f dockerfile -t "jenkinz:{versio
 
 ### Starting Jenkins from custom iamge locally
 - docker-compose 
-	```
-	docker-compose up -d
-	```
+    ```
+    docker-compose up -d
+    ```
     *Need to check the version in the docker-compose.yml file
 - commands 
-	```
-	docker run --name jenkinz -p 8080:8080 -p 50000:50000 -v jenkinsVol:/var/jenkins_home scabrerao/jenkinz:lts
-	```
+    ```
+    docker run --name jenkinz -p 8080:8080 -p 50000:50000 -v jenkinsVol:/var/jenkins_home scabrerao/jenkinz:lts
+    ```
 
 ### Publish a docker image
 ```
@@ -41,7 +41,7 @@ docker push {githubUser}/jenkinz:latest
 ## Public Docker image example
 [jenkinz Docker Image](https://cloud.docker.com/u/scabrerao/repository/docker/scabrerao/jenkinz)
 
-```docker push scabrerao/jenkinz:tagname```
+```docker pull scabrerao/jenkinz:{tagname}```
 
 ## Jenkins components
  - Jenkins:lts
