@@ -1,11 +1,11 @@
-jenkins:  
-  container_name: jenkinz  
-  image: jenkinz:V1.5
-  environment:  
-    JAVA_OPTS: "-Djava.awt.headless=true"  
-    JAVA_OPTS: "-Djenkins.install.runSetupWizard=false" # Start jenkins unlocked  
-  ports:  
-    - "50000:50000"  
-    - "8080:8080"  
-  volumes:  
+jenkins:
+  container_name: jenkinz
+  image: jenkinz:latest-alpine
+  environment:
+    JAVA_OPTS: "-Djava.awt.headless=true"
+    JAVA_OPTS: "-Djenkins.install.runSetupWizard=false" # Start jenkins unlocked
+  ports:
+    - "50000:50000"
+    - "8080:8080"
+  volumes:
     - jenkinsVol:/var/jenkins_home
